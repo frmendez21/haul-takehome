@@ -1,0 +1,22 @@
+.date-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.date-list-item {
+    padding: 30px;
+}
+.month-head, .weekly-head {
+    text-align: center;
+    font-weight: bolder;
+}
+
+.date-list-item:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.week-summary {
+    margin-left: auto;
+}

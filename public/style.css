@@ -1,15 +1,32 @@
-.date-list {
+.week1 > .date-list {
     display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
+    flex-direction: row;
+    justify-content: flex-end;
 }
+.week1 > .date-list .date-list-item {
+    width: 100px;
+}
+.week1 > .date-list > .summary {
+    margin-left: 0;
+}
+.date-list {
+    display: grid;
+    grid-template-columns: repeat(7, 12%) 16%;
+}
+
+.date-list:hover {
+    background-color: aliceblue;
+}
+
 
 .date-list-item {
     padding: 30px;
+
 }
 .month-head, .weekly-head {
     text-align: center;
     font-weight: bolder;
+    font-size: 18px;
 }
 
 .date-list-item:hover {
@@ -17,6 +34,34 @@
     cursor: pointer;
 }
 
-.week-summary {
+.total-hours {
+    padding-top: 15px;
+}
+
+.driver-index {
+    padding: 20px;
+}
+.month-container {
+    padding: 20px 0;
+}
+.med-warning {
+    font-size: 12px;
+    background-color: yellow;
+}
+
+.high-warning {
+    font-size: 12px;
+    background-color: red;
+    color: white;
+    text-transform:uppercase;
+}
+
+.summary {
+    grid-column-start: 8;
     margin-left: auto;
+    width: 225px;
+}
+
+.summary > p {
+    padding: 5px 0;
 }

@@ -1,16 +1,17 @@
 import React, {useState} from 'react';
 
 const DateListItem = props => {
+    // set dropdown hook to false and create toggle function to handle click
     const [dropDown, showDropDown] = useState(false);
     const toggleDropDown = () => showDropDown(!dropDown);
 
-    const startDate = new Date(props.datum.startTime).toLocaleDateString();
-    const endDate = new Date(props.datum.endTime).toLocaleDateString();
-    const startTime = new Date(props.datum.startTime).toLocaleTimeString();
-    const endTime = new Date(props.datum.endTime).toLocaleTimeString()
-    const milliDiff = new Date(props.datum.endTime) - new Date(props.datum.startTime);
-    const hoursWorked = Math.floor(milliDiff / 3600000)
+    // get local dates and times
+    const startDate = props.startTime.toLocaleDateString();
+    const endDate = props.endTime.toLocaleDateString();
+    const startTime = props.startTime.toLocaleTimeString();
+    const endTime = props.endTime.toLocaleTimeString();
 
+    // if dropdown has not been toggled don't show dropdown, else show
     if(!dropDown) {
         return(
             <li className="date-list-item" onClick={toggleDropDown}>
@@ -18,14 +19,15 @@ const DateListItem = props => {
             </li>
         );
     } else {
-
+        // console.log(dailyPay)
         return(
             <li className="date-list-item" onClick={toggleDropDown}>
                 {startDate}
                 <p>Start Time: {startTime}</p>
                 <p>End Date: {endDate} </p>
                 <p>End Time: {endTime}</p>
-                <p>Hours Worked: {hoursWorked}</p>
+                <p>Hours Worked: {props.hours.toFixed(2)}</p>
+                <p>Daily Pay: {props.dailyPay.toFixed(2)}</p>
             </li>
         );
     };

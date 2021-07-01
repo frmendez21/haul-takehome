@@ -142,8 +142,9 @@ const DriverIndex = () => {
     
     
     //create an array and push each weeks data in jsx format ready to render
-
+    let i = 0;
     const janWeeks = [];
+
     for(let week in jan) {
         // set warning flags to false
         let mediumWarning = false;
@@ -161,9 +162,9 @@ const DriverIndex = () => {
         const regPay = overTimeHours > 0 ? 40 * 22 : currWeekHours * 22;
         const otPay = overTimeHours * 33;
         const totalPay = regPay + otPay;
-
+        i++
         // push the data to the janWeeks array
-        janWeeks.push(<div className={`${week}`}>
+        janWeeks.push(<div key={`jan-${i}`}className={`${week}`}>
                         <ul className="date-list">
                             {jan[`${week}`]}
                             <div className="summary">
@@ -196,8 +197,9 @@ const DriverIndex = () => {
         const regPay = overTimeHours > 0 ? 40 * 22 : currWeekHours * 22;
         const otPay = overTimeHours * 33;
         const totalPay = regPay + otPay;
+        i++
 
-        febWeeks.push(<div className={`${week}`}>
+        febWeeks.push(<div key={`feb-${i}`}className={`${week}`}>
                         <ul className="date-list">
                             {feb[`${week}`]}
                             <div className="summary">
@@ -230,8 +232,9 @@ const DriverIndex = () => {
         const regPay = overTimeHours > 0 ? 40 * 22 : currWeekHours * 22;
         const otPay = overTimeHours * 33;
         const totalPay = regPay + otPay;
+        i++
 
-        marchWeeks.push(<div className={`${week}`}>
+        marchWeeks.push(<div key={`march-${i}`}className={`${week}`}>
                         <ul className="date-list">
                             {march[`${week}`]}
                             <div className="summary">

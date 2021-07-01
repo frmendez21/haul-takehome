@@ -74,7 +74,7 @@ const DriverIndex = () => {
        const hoursDiff = milliDiff / 3600000;
 
        // convert onDutyDurationMs from milliseconds to hours
-       const dutyMs = (datum.dutyStatusDurations.onDutyDurationMs / 3600) % 24;
+       const dutyMs = (datum.dutyStatusDurations.onDutyDurationMs / 3600000);
         
        // if dutyDurationMs is 0 use hoursDiff else use dutyMs
        const hoursWorked = dutyMs === 0 ? hoursDiff : dutyMs;
@@ -116,6 +116,7 @@ const DriverIndex = () => {
                feb.week2[day] = dlItem;
                febHours[2] += hoursWorked;
            } else if(!feb.week3[6]) {
+               console.log(dutyMs)
                feb.week3[day] = dlItem;
                febHours[3] += hoursWorked;
            } else if(!feb.week4[6]) {

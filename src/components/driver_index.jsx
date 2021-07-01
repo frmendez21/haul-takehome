@@ -116,7 +116,6 @@ const DriverIndex = () => {
                feb.week2[day] = dlItem;
                febHours[2] += hoursWorked;
            } else if(!feb.week3[6]) {
-               console.log(dutyMs)
                feb.week3[day] = dlItem;
                febHours[3] += hoursWorked;
            } else if(!feb.week4[6]) {

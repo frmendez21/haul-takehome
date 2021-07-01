@@ -1,5 +1,9 @@
 # Welcome to my Haul Take Home project!
 
+## Setup
+Clone this repo onto your local machine, once there run npm install to install dependencies.
+running npm start will start the app in development mode and should open a tab in your browser
+
 ### Instructions
 
 Hovering over a week will highlight the entire row, hovering over day will highlight that day in gray.

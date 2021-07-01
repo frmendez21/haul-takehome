@@ -38,14 +38,12 @@ const DriverIndex = () => {
         week3: new Array(7),
         week4: new Array(7),
         week5: new Array(7), 
-        week6: new Array(7)
     };
     const feb = {
         week1: new Array(7),
         week2: new Array(7),
         week3: new Array(7),
         week4: new Array(7),
-        week5: new Array(7)
     };
     const march = {
         week1: new Array(7),
@@ -66,7 +64,7 @@ const DriverIndex = () => {
        const startTime = new Date(datum.startTime);
        const endTime = new Date(datum.endTime);
        
-       const month = startTime.getMonth()
+       let month = startTime.getMonth()
        const day = startTime.getDay();
 
        // calculate difference between end and start time (added subtraction of offDutyDuration to make numbers more realistic)
@@ -103,9 +101,9 @@ const DriverIndex = () => {
            } else if(!jan.week5[6]){
                jan.week5[day] = dlItem;
                janHours[5] += hoursWorked;
-           } else if(!jan.week6[6]) {
-               jan.week6[day] = dlItem;
-               janHours[6] += hoursWorked;
+           } else if(!feb.week1[6]) {
+               feb.week1[day] = dlItem;
+               febHours[1] += hoursWorked;
            }
        }
        if(month === 1) {
@@ -121,9 +119,9 @@ const DriverIndex = () => {
            } else if(!feb.week4[6]) {
                feb.week4[day] = dlItem;
                febHours[4] += hoursWorked;
-           } else if(!feb.week5[6]) {
-               feb.week5[day] = dlItem;
-               febHours[5] += hoursWorked;
+           } else if(!march.week1[6]) {
+               march.week1[day] = dlItem;
+               marchHours[1] += hoursWorked;
            }
        }
        if(month === 2) {

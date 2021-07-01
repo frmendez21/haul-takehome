@@ -1,6 +1,6 @@
-#Welcome to my Haul Take Home project!
+# Welcome to my Haul Take Home project!
 
-###Instructions
+### Instructions
 
 Hovering over a week will highlight the entire row, hovering over day will highlight that day in gray.
 ![demo-1](public/demo1.png)

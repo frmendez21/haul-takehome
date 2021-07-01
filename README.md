@@ -1,7 +1,7 @@
 # Welcome to my Haul Take Home project!
 
 ## Setup
-Clone this repo onto your local machine, once there run npm install to install dependencies.
+Clone this repo onto your local machine, once there run npm install to install dependencies (may need to delete package-lock.json)
 running npm start will start the app in development mode and should open a tab in your browser
 
 ### Instructions
